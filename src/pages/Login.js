@@ -27,15 +27,16 @@ const Login = () => {
         <div className="login__page">
             <div className="login__container">
                 <div className="login__container-left">
-                    <h2 className="login__container-left--title">Welcome back to Contra 👋</h2>
+                    <h1 className="login__container-left--title">Welcome back to Contra 👋</h1>
                     <div className='login__container-left--input-cont'>
-                        <span>Email address</span>
+                        <label>Email address</label>
                         <input 
                             type="text"
                             placeholder='name@email.com' 
+                            required
                         />
                     </div>
-                    <button className='login__container-left--btn'>Log in</button>
+                    <button className='login__container-left--btn'>Log In</button>
                 </div>
                 <div className="login__container-right">
                     <img src="https://contra.com/static/assets/login@2x.b44e5924.webp" alt="Contra" className="login__container-right--image" />
@@ -43,8 +44,8 @@ const Login = () => {
             </div>
 
             <div className='signup__container'>
-                <p>New to Contra? Join our commision-free platform</p>
-                <button>Sign Up</button>
+                <p className='signup__container-text'>New to Contra? Join our commision-free platform</p>
+                <button className='signup__container-btn'>Sign Up</button>
             </div>
         </div>
     </div>
