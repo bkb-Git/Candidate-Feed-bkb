@@ -21,9 +21,9 @@
     left: 5em;
 }
 
-svg {
+/* svg {
     filter: invert(1);
-}
+} */
 
 /* container */
 
@@ -89,7 +89,7 @@ svg {
 }
 
 input[type="text"] {
-    padding-top: 1.4rem;
+    padding-top: 1.9rem;
     padding-left: 1.3rem;
     padding-bottom: .3rem;
     width: 100%;
@@ -100,7 +100,8 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    padding-top: 2.5rem;
+    padding-top: 2.7rem;
+    padding-bottom: .8rem;
     outline: none;
     border: var(--input-border-focus);
     transition: all .4s ease-in-out;
@@ -153,7 +154,7 @@ input[type="text"]::placeholder {
 
 
 .signup__container-text {
-    color: var(--white-bg);
+    color: black;
     max-width: 480px;
     text-align: center;
     font-weight: 400;
