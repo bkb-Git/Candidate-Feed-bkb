@@ -89,7 +89,9 @@ svg {
 }
 
 input[type="text"] {
-    padding: 1.4rem;
+    padding-top: 1.4rem;
+    padding-left: 1.3rem;
+    padding-bottom: .3rem;
     width: 100%;
     border-radius: .6rem;
     border: var(--input-border);
@@ -98,6 +100,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
+    padding-top: 2.5rem;
     outline: none;
     border: var(--input-border-focus);
     transition: all .4s ease-in-out;
@@ -105,7 +108,7 @@ input[type="text"]:focus {
 
 input[type="text"]::placeholder {
     position: absolute;
-    bottom: .5rem;
+    /* bottom: .5rem; */
 }
 
 

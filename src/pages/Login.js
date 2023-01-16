@@ -1,5 +1,5 @@
 import React from 'react';
-import blur from '../assets/blur_bg_3.jpg'
+import blur from '../assets/blur_bg_1.jpeg'
 import '../styles/Login.css';
 
 
