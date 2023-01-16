@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import blur from '../assets/blur_bg_1.jpeg'
 import '../styles/Login.css';
 
 
-const Login = () => {
+
+const Login = ({ title }) => {
+
+    useEffect(() => document.title = title, [])
+
   return (
     <div className='login'>
         <div className='login__bg'>
