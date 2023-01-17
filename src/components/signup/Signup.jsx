@@ -13,8 +13,6 @@ import hiringImg from "../../assets/hiring.webp";
 
 const Signup = ({ title }) => {
 
-  useEffect(() => document.title = title, [title])
-
   const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',

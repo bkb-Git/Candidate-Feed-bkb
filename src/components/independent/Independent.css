@@ -1,0 +1,13 @@
+.sign-up-independent {
+  background-image: url("../../assets//blur_bg_1.jpeg");
+  background-repeat: no-repeat;
+  height: 1000vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  height: 150px;
+}
