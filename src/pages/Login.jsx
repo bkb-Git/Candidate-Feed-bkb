@@ -67,7 +67,7 @@ const Login = ({ title }) => {
               <Typography
                 sx={{
                   position: "absolute",
-                  top: ".5rem",
+                  top: ".9rem",
                   left: "1.45rem",
                   fontSize: "1.1rem",
                   fontWeight: 400,
@@ -79,25 +79,34 @@ const Login = ({ title }) => {
               </Typography>
               <input type="text" placeholder="name@email.com" required />
             </Box>
-            <Button
-              variant="contained"
+            <Box
               sx={{
-                padding: ".8rem 1.4rem",
-                backgroundColor: "black",
-                border: "none",
-                color: "white",
-                borderRadius: "2.5rem",
-                fontWeight: "600",
-                fontSize: "1.2rem",
-                cursor: "pointer",
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "black",
-                },
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "1.2rem",
               }}
             >
-              Log In
-            </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  padding: ".8rem 1.4rem",
+                  backgroundColor: "black",
+                  border: "none",
+                  color: "white",
+                  borderRadius: "2.5rem",
+                  fontWeight: "600",
+                  fontSize: "1.2rem",
+                  cursor: "pointer",
+                  textTransform: "none",
+                  "&:hover": {
+                    backgroundColor: "black",
+                  },
+                }}
+              >
+                Log In
+              </Button>
+            </Box>
           </Box>
           <Box className="login__container-right">
             <Box

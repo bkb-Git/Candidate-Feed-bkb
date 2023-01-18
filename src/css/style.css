@@ -83,7 +83,7 @@ body {
 input[type="text"] {
   padding-top: 3.2rem;
   padding-left: 1.3rem;
-  padding-bottom: .3rem;
+  padding-bottom: .8rem;
   width: 100%;
   border-radius: .6rem;
   border: 1px solid #d0d4dc;
@@ -130,3 +130,12 @@ input[type="text"] {
       color: #000;
       background-color: #fff;
       transition: all .3s ease-in-out; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
