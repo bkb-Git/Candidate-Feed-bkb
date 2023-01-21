@@ -52,7 +52,7 @@ const Hiring = () => {
           }}
         >
           <Button
-            onClick={() => navigate("/sign-up")}
+            onClick={() => navigate("/hiring/p1")}
             disableRipple
             sx={{
               position: "absolute",

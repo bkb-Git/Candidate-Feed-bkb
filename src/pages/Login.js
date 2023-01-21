@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import blur from "../assets/blur_bg_1.jpeg";
 import "../styles/Login.css";
@@ -56,16 +55,5 @@ const Login = ({ title }) => {
     </div>
   );
 };
-=======
-import React from 'react';
-
-const Login = () => {
-  return (
-    <div>
-      Login Page
-    </div>
-  )
-}
->>>>>>> 73f4f2d (Login page)
 
 export default Login;

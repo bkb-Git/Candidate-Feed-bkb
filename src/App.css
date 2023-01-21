@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-*, html {
+*,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"';
-  font-size: 62.5%;    /* 62.5% = 10px */
+  font-size: 62.5%; /* 62.5% = 10px */
 }
 
 :root {
@@ -17,9 +17,6 @@ body {
   --input-border: 1px solid rgb(208, 212, 220);
   --input-border-focus: 1px solid rgb(59, 60, 62);
   --input-txt-color: rgb(103, 112, 132);
-=======
-.App {
-  text-align: center;
 }
 
 .App-logo {
@@ -55,5 +52,4 @@ body {
   to {
     transform: rotate(360deg);
   }
->>>>>>> 73f4f2d (Login page)
 }
