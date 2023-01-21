@@ -1,5 +1,4 @@
 import { Typography, Button, Box, Card } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
 import React, { useEffect } from "react";
 import blur from "../assets/blur_bg_3.jpg";
 import LogoContra from "../assets/LogoContra";
@@ -7,10 +6,6 @@ import LogoContra from "../assets/LogoContra";
 const Login = ({ title }) => {
   useEffect(() => {
     document.title = title;
-  });
-
-  const theme = createTheme({
-    shadows: ["none"],
   });
 
   return (
