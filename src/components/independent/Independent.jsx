@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // MaterialUI imports
 import { styled } from '@mui/material/styles';
@@ -16,6 +16,8 @@ import Discover from '../../assets/discover.webp';
 
 const Independent = () => {
 
+  const [activeBox, setActiveBox] = useState();
+
   // Custom Material UI styles
   // custom stylebox in selection area
   const StyledBox = styled(Box)(({ theme }) => ({ // link up theme later
@@ -32,9 +34,13 @@ const Independent = () => {
     transition: '1s ease',
     '&:hover': {
       cursor: 'pointer',
-      boxShadow: '1px 0px 14px 0px rgba(194,171,171,0.75)',  // rgba(229,231,235)
+      boxShadow: '1px 0px 14px 0px #AABBCC',  // rgba(229,231,235)  rgba(194,171,171,0.75) #AABBCC
       transform: 'scale(1.05)',
       transition: '.5s ease',
+    },
+    '&.clicked': {
+      border: '2px solid rgba(194,171,171,0.80)',
+      transform: 'scale(1.05)',
     }
   }));
 
@@ -97,28 +103,40 @@ const Independent = () => {
 
         <Box sx={gridContainer}>
           <Box>
-            <StyledBox>
+            <StyledBox 
+              className={activeBox === 'portfolio' ? 'clicked' : ''} 
+              onClick={() => setActiveBox('portfolio')}
+            >
               <img src={Portfolio} alt="" />
               <StyledTitle variant='h5'>Build Portfolio</StyledTitle>
               <StyledSpan>Highlight past projects and supercharge your brand.</StyledSpan>
             </StyledBox>
           </Box>
           <Box>
-            <StyledBox>
+            <StyledBox
+              className={activeBox === 'discover' ? 'clicked' : ''} 
+              onClick={() => setActiveBox('discover')}
+            >
               <img src={Discover} alt="" />
               <StyledTitle variant='h5'>Get Discovered</StyledTitle>
               <StyledSpan>Make it easier for potential Clients to find you.</StyledSpan>
             </StyledBox>
           </Box>
           <Box>
-            <StyledBox>
+            <StyledBox
+              className={activeBox === 'opportunities' ? 'clicked' : ''} 
+              onClick={() => setActiveBox('opportunities')}
+            >
               <img src={Opportunities} alt="" />
               <StyledTitle variant='h5'>Find Opportunities</StyledTitle>
               <StyledSpan>Browse high-quality remote jobs, exclusively on Contra.</StyledSpan>
             </StyledBox>
           </Box>
           <Box>
-            <StyledBox>
+            <StyledBox
+              className={activeBox === 'paid' ? 'clicked' : ''} 
+              onClick={() => setActiveBox('paid')}
+            >
               <img src={Paid} alt="" />
               <StyledTitle variant='h5'>Get Paid Commission-Free</StyledTitle>
               <StyledSpan>Manage new or existing Clients in one place. You keep 100% of the profit.</StyledSpan>

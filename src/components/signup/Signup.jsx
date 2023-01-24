@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
 // MaterialUI imports
 import { styled } from '@mui/material/styles';
@@ -11,7 +11,9 @@ import './Signup.css';
 import independentImg from "../../assets/independent.webp";
 import hiringImg from "../../assets/hiring.webp";
 
-const Signup = ({ title }) => {
+const Signup = () => {
+
+  const [activeBox, setActiveBox] = useState();
 
   const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -27,9 +29,13 @@ const Signup = ({ title }) => {
     transition: '1s ease',
     '&:hover': {
       cursor: 'pointer',
-      boxShadow: '1px 0px 14px 0px rgba(194,171,171,0.75)',
+      boxShadow: '1px 0px 14px 0px #AABBCC', // old 1px 0px 14px 0px rgba(194,171,171,0.75)  
       transform: 'scale(1.1)',
       transition: '.5s ease',
+    },
+    '&.clicked': {
+      border: '2px solid rgba(194,171,171,0.80)',
+      transform: 'scale(1.05)',
     }
   }));
 
@@ -67,7 +73,10 @@ const Signup = ({ title }) => {
           alignItems: 'center',
           gap: '30px'
         }}>
-          <StyledBox>
+          <StyledBox 
+            className={activeBox === 'independent' ? 'clicked' : ''} 
+            onClick={() => setActiveBox('independent')}
+          >
             <img src={independentImg} alt="" />
             <Typography variant='h6' sx={{ fontWeight: 'bold', marginBottom: '10px'}}>I'm an Independent</Typography>
             <StyledSpan>Find work and manage your freelance business</StyledSpan>
@@ -75,7 +84,10 @@ const Signup = ({ title }) => {
           <Box>
             <Typography>OR</Typography>
           </Box>
-          <StyledBox>
+          <StyledBox 
+            className={activeBox === 'hiring' ? 'clicked' : ''} 
+            onClick={() => setActiveBox('hiring')}
+          >
             <img src={hiringImg} alt="" />
             <Typography variant='h6' sx={{ fontWeight: 'bold', marginBottom: '10px'}}>I'm Hiring</Typography>
             <StyledSpan>Post opportunities and manage hiring</StyledSpan>
@@ -181,3 +193,4 @@ export default Signup;
 // }
 
 // export default Signup;
+
