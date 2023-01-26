@@ -1,10 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import blur from "../assets/blur_bg_1.jpeg";
 import "../styles/Login.css";
 import { useNavigate } from "react-router-dom";
 import LogoContra from "../assets/LogoContra";
 
 const Login = ({ title }) => {
+  const [value, setValue] = useState(null);
+  // API call
+
+  const handleChange = (e) => {
+    const {
+      target: { value },
+    } = e;
+
+    setValue(value);
+  };
+
+  const handleClick = async () => {
+    console.log(value);
+
+    try {
+      const data = await fetch("http://localhost:5000/api/auth/checkEmail", {
+        body: JSON.stringify({ email: value }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const logData = await data.json();
+
+      console.log(logData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     return (document.title = title)[title];
   });
@@ -27,9 +58,19 @@ const Login = ({ title }) => {
             </h1>
             <div className="login__container-left--input-cont">
               <label>Email address</label>
-              <input type="text" placeholder="name@email.com" required />
+              <input
+                type="text"
+                placeholder="name@email.com"
+                required
+                onChange={handleChange}
+              />
             </div>
-            <button className="login__container-left--btn">Log In</button>
+            <button
+              className="login__container-left--btn"
+              onClick={handleClick}
+            >
+              Log In
+            </button>
           </div>
           <div className="login__container-right">
             <img
